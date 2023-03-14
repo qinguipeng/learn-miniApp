@@ -1,0 +1,53 @@
+/* pages/02_common_cpns/index.js.wxss */
+
+
+/* input组件，及属性 */
+input {
+  border: 2px solid red;
+  width: 300px;
+  height: 30px;
+}
+
+
+
+/* scroll-view组件，及属性 */
+.scroll-y {
+  background-color: tomato;
+  height: 200px;
+  padding: 0;
+}
+
+.scroll-x {
+  display: flex;
+  background-color: greenyellow;
+  height: 200px;
+  padding: 0;
+}
+
+.viewColors-item {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* image组件 */
+.img {
+  width: 100%;
+}
+
+
+
+/* buttom 组件*/
+/* 通过样式，自定义 */
+.btn {
+  color: blue;
+  background: orange;
+  border: 10px solid cornflowerblue;
+}
+
+/* hover-class属性 */
+.active {
+  background: #000;
+  color: white;
+}

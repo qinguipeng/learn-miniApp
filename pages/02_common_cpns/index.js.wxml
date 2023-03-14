@@ -1,0 +1,136 @@
+<!--pages/02_common_cpns/index.js.wxml-->
+<view>
+  ----------------input组件，及属性-----------------
+</view>
+<!-- input组件，及属性 -->
+<!-- 现已支持数据双向绑定 -->
+<input type="text" model:value="{{message}}" placeholder="请输入" />
+
+<view>
+  --------------scroll-view组件，及属性--------------
+</view>
+<!-- scroll-view组件，及属性 -->
+<!-- 上下滚动 scroll-y ,container高度要固定且<内容总高度-->
+<view>
+  scroll-y
+</view>
+<scroll-view class=" container scroll-y" scroll-y>
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="viewColors-item" style="background:{{item}};">{{item}}</view>
+  </block>
+</scroll-view>
+
+<view>
+  scroll-x
+</view>
+<!-- 左右滚动 scroll-x ,container宽度要固定且<内容总宽度-->
+<scroll-view class="scroll-x" scroll-x enable-flex>
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="viewColors-item" style="background:{{item}};">{{item}}</view>
+  </block>
+</scroll-view>
+
+<view>
+  事件监听:bindscrolltoupper,bindscrolltolower,bindscroll
+</view>
+<!-- 事件监听  	bindscrolltoupper,bindscrolltolower,bindscroll-->
+<scroll-view class="scroll-x" scroll-x enable-flex bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" bindscroll="bindscroll">
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="viewColors-item" style="background:{{item}};">{{item}}</view>
+  </block>
+</scroll-view>
+
+
+<view>
+  ----------------image组件，及属性-----------------
+</view>
+<!--image组件，及属性 -->
+<!-- image组件默认尺寸是320*240 -->
+<!-- 1. 基本属性src -->
+<image src="/assets/zznh.png" mode="" />
+<image src="https://www.ssfiction.com/wp-content/uploads/2020/08/20200805_5f2b1669e9a24.jpg" mode="" />
+
+<!-- 2.mode属性-->
+<!-- <image src="/assets/zznh.png" mode="aspectFill" /> -->
+<!-- 使用频率高的值 widthFix-->
+<image src="/assets/zznh.png" mode="widthFix" />
+<!-- <image src="/assets/zznh.png" mode="heightFix" /> -->
+
+<!-- 3. 选择本地图片，井本地图片用image展示 -->
+<button type="primary" bindtap="onChooseImage">选择本地图片</button>
+<image src="{{chooseImageUrl}}" mode="widthFix" class="img" />
+
+
+
+<view>
+  ----------------view组件，及属性-----------------
+</view>
+<!-- view组件，及属性 -->
+<view bindtap="onViewClick">
+  我是view组件，块级组件
+</view>
+
+<view>
+  我也是view组件
+</view>
+
+
+
+
+
+
+
+
+
+
+<view>
+  ----------------button组件，及属性-----------------
+</view>
+<!-- button组件，及属性 -->
+<!-- 1.常用属性 -->
+<!-- 默认按钮，是块级元素 -->
+<button>默认按钮</button>
+<text>我是行内元素text</text>
+<!-- size属性值mini，为行内块元素 -->
+<button size="mini">size属性值mini</button>
+<!-- type属性值，primary，warn ，default-->
+<button type="primary">type属性值primary</button>
+<button type="warn">type属性值warn</button>
+<button type="default">type属性值default</button>
+<!-- 通过样式，自定义 -->
+<button class="btn">自定义属性按钮，样式修改</button>
+<!--	plain属性值boolean  -->
+<button plain>镂空plain属性</button>
+<!-- 	disabled属性 -->
+<button disabled>disabled属性</button>
+<!-- 	loading 属性-->
+<button loading>loading属性</button>
+<!-- 	hover-class属性 -->
+<button hover-class="active">hover-class属性</button>
+
+
+<!-- 2.特殊属性 open-type	微信开放能力 -->
+<!-- open-type属性值contact -->
+<button open-type="contact" type="primary" size="mini">open-type属性值contact</button>
+<!-- open-type属性值getUserInfo  bindgetuserinfo="getUserInfo"-->
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" size="mini">open-type属性值getUserInfo获取用户信息</button>
+<!--getUserInfo通过wx.getUserProfile(Object object)回调 -->
+<button bindtap="getUserInfo" type="default" size="mini">getUserInfo通过wx.getUserProfile(Object object)回调</button>
+<!--open-type属性值getPhoneNumber   bindgetphonenumber="getphonenumber" -->
+<button open-type="getPhoneNumber" bindgetphonenumber="getphonenumber" type="default" size="mini">open-type属性值getPhoneNumber，通过bindgetphonenumber回调</button>
+
+
+
+
+
+<view>
+  ----------------text组件，及属性-----------------
+</view>
+<!-- text组件，及属性 -->
+<text>Hello</text>
+<!-- 1.显示空格 space-->
+<text space="emsp"> {{ message}} </text>
+<!-- 2.是否可选 user-select-->
+<text user-select="{{ true }}">{{ message }}</text>
+<!-- 3.字符实体是否解码 decode -->
+<text decode> &gt;</text>

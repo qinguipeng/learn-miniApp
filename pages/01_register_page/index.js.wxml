@@ -1,0 +1,41 @@
+<!-- <text>01_register_page</text> -->
+<!-- 1.作用一：发送请求，轮播图例子 -->
+<view class="banner">
+  <swiper circular autoplay indicator-dots="{{true}}" indicator-color="#fff">
+    <block wx:for="{{list}}" wx:key="item.iid">
+      <swiper-item class="swiper-item">
+        <!-- 组件默认宽度320*240 -->
+        <image src="{{item.showLarge.img}}" mode="" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+<!--2. 作用二：初始化本地数据 -->
+<view class="	counter" style="text-align: center;">
+  <view>
+    当前计数： {{counter}}
+  </view>
+</view>
+
+<!-- 3. 作用三：绑定wxml事件 -->
+<view class="buttons">
+  <button type="warn" bindtap="onBtn1Click">按钮1</button>
+</view>
+
+<!-- 多色按钮案例-->
+<block wx:for="{{btns}}" wx:key="*this">
+  <button style="background: {{item}};" class="btns" bindtap="onBtnsClick" data-color="{{item}}">
+    {{item}}
+  </button>
+</block>
+
+
+<view class="list">
+  <block wx:for="{{50}}">
+    <view>
+      列表数据 {{item}}
+    </view>
+  </block>
+</view>

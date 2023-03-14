@@ -1,0 +1,26 @@
+<!--pages/favor/favor.wxml-->
+<!-- <text>pages/favor/favor.wxml</text> -->
+<!--1. 显示普通文本 -->
+<text class="title">我是普通文本</text>
+
+<!-- 2.动态绑定数据 -->
+<view class="message">{{message}}</view>
+
+<!-- 3.动态绑定列表数据 -->
+<!-- for循环 ：<block> -->
+<block wx:for="{{novel}}" wx:key="*this">
+  <view class="novel">
+    {{index}}-{{item}}
+  </view>
+</block>
+
+<br />
+<!--4. 事件绑定:计数器案例 -->
+<view class="counter">
+  <view class="count">
+    当前计数：{{count}}
+  </view>
+  <button size="mini" type="primary" bindtap="increment">+1</button>
+
+  <button size="mini" type="warn" bindtap="decrement">-1</button>
+</view>
