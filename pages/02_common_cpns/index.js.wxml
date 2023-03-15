@@ -14,7 +14,7 @@
 <view>
   scroll-y
 </view>
-<scroll-view class=" container scroll-y" scroll-y>
+<scroll-view class=" scroll-y" scroll-y>
   <block wx:for="{{viewColors}}" wx:key="*this">
     <view class="viewColors-item" style="background:{{item}};">{{item}}</view>
   </block>

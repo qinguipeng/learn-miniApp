@@ -1,0 +1,19 @@
+/* pages/03_wxss/index.js.wxss */
+
+
+
+
+
+/* rex */
+.rpx {
+  font-size: 32rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: greenyellow;
+}
+
+
+/* 样式 */
+.page {
+  color: green;
+}

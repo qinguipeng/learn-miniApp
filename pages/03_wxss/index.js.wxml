@@ -1,0 +1,33 @@
+<!--pages/03_wxss/index.js.wxml-->
+<text>pages/03_wxss/index.js.wxml</text>
+<view>
+  -----------------------------wxss拓展：尺寸单位rpx
+</view>
+<!-- 2.尺寸单位rpx  -->
+<view class="rpx">
+  rpx单位
+</view>
+
+
+
+
+<view>
+  --------------------------------------wxss选择器
+</view>
+
+<navigator url="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">wxss选择器</navigator>
+
+
+
+
+<view>
+  --------------------------------------wxss样式
+</view>
+<!-- 1.1 应用全局样式 -->
+<view class=" title"> 全局样式</view>
+<!-- 1.2 应用页面样式 -->
+<view class="page">页面样式</view>
+<!-- 1.3行内样式 -->
+<view style="color: blue;">
+  行内样式
+</view>

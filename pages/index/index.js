@@ -7,6 +7,7 @@ Page({
     pages: [
       { name: '01_注册页面', path: "/pages/01_register_page/index.js" },
       { name: '02_常见组件', path: "/pages/02_common_cpns/index.js" },
+      { name: '03_wxss', path: "/pages/03_wxss/index.js" },
     ]
   }
   // 监听 onBtnClick
