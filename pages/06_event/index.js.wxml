@@ -30,3 +30,20 @@
 <!-- 4.event参数的传递  视图层   传递给  逻辑层-->
 <!-- 组件中自定义参数data-*，通过 事件对象event.currentTarget.dataset属性获取-->
 <view class="arguments" data-name="GP" data-age="18" data-height="18.8 " bindtap="onArgumentsTap">参数传递</view>
+
+<view>
+  ------------------5. event小案例：tab-control实现
+</view>
+<!-- 1. data中存储获取数据
+2. 遍历显示到页面中
+3.调整样式，flex
+4.添加事件，传参数index
+5.通过判断currentIndex==index 动态增加样式 {{currentIndex==index?active:''}} -->
+
+<view class="tab-control">
+  <block wx:for="{{title}}" wx:key="*this">
+    <view class="item" bindtap="itemTap" data-index="{{index}}">
+      <text class="text {{currentIndex==index?'active':''}} ">{{item}}</text>
+    </view>
+  </block>
+</view>

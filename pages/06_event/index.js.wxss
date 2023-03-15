@@ -29,3 +29,34 @@
 .arguments {
   background-color: purple;
 }
+
+
+
+
+
+
+/* tab-control */
+.tab-control {
+  display: flex;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border: 3px dotted rgb(223, 12, 47);
+}
+
+.item {
+  flex: 1;
+  /* color: rgb(223, 12, 47); */
+}
+
+.text {
+  padding: 5px;
+  /* border-bottom: 3px solid rgb(223, 12, 47); */
+}
+
+.active {
+  color: rgb(223, 12, 47);
+  border-bottom: 3px solid rgb(223, 12, 47);
+}
+
+/* tab-control */

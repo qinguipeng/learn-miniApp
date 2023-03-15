@@ -1,7 +1,29 @@
 // pages/06_event/index.js.js
 Page({
+  data: {
+
+
+    // --------------------------------tab-control 相关
+    title: ["手机", "电脑", "平板", "mac"],
+    currentIndex: 0
+  }
+  // tab-control
+  , itemTap(e) {
+    // console.log(e.currentTarget.dataset.index);
+    this.setData({
+      currentIndex: e.currentTarget.dataset.index
+    })
+  }
+  // --------------------------------tab-control 相关
+
+
+
+
+
+
+
   // 事件
-  onBtnTap(e) {
+  , onBtnTap(e) {
     console.log("onBtnTape", e);
   }
 
