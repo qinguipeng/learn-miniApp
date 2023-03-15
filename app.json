@@ -6,7 +6,10 @@
     "pages/profile/profile",
     "pages/01_register_page/index.js",
     "pages/02_common_cpns/index.js",
-    "pages/03_wxss/index.js"
+    "pages/03_wxss/index.js",
+    "pages/04_wxml/index.js",
+    "pages/05_wxs/index.js",
+    "pages/06_event/index.js"
   ],
   "window": {
     "backgroundTextStyle": "light",

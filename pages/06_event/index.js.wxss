@@ -1,0 +1,31 @@
+/* pages/06_event/index.js.wxss */
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400rpx;
+  height: 400rpx;
+  background-color: orange;
+}
+
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}
+
+
+.duo,
+.arguments {
+  height: 100rpx;
+  color: aliceblue;
+}
+
+.duo {
+  background-color: green;
+}
+
+.arguments {
+  background-color: purple;
+}

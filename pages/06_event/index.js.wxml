@@ -1,0 +1,32 @@
+<!--pages/06_event/index.js.wxml-->
+<text>pages/06_event/index.js.wxml</text>
+<view>
+  ---------------------1. 事件的基本使用
+</view>
+<!-- 1. 事件的基本使用 -->
+<button type="default" bindtap="onBtnTap">按钮</button>
+
+<view>
+  -------2.事件对象event中 currentTarget和target的区别
+</view>
+<!-- 2.事件对象event中 currentTarget(处理事件的组件)和target(触发事件的组件)的区别 -->
+<view id="outer" class="outer" bindtap="onOuterTap" data-name="外层">
+  <view id="inner" class="inner"></view>
+</view>
+
+
+<view>
+  --3.事件对象event中 cchangedTouches 和 touches的区别
+</view>
+<!-- 3.changedTouches 和 touches -->
+
+<view class="duo" bindtap="onTouchTap" bindlongpress="onLongPress" bindtouchend="onTouchend">
+  多指触摸
+</view>
+
+<view>
+  ---------------------------------------4. event参数的传递
+</view>
+<!-- 4.event参数的传递  视图层   传递给  逻辑层-->
+<!-- 组件中自定义参数data-*，通过 事件对象event.currentTarget.dataset属性获取-->
+<view class="arguments" data-name="GP" data-age="18" data-height="18.8 " bindtap="onArgumentsTap">参数传递</view>

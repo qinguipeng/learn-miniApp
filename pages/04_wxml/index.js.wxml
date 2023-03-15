@@ -1,0 +1,104 @@
+<!--pages/04_wxml/index.js.wxml-->
+<text>pages/04_wxml/index.js.wxml</text>
+
+
+<view>
+  -----------------------列表渲染 – wx:for基础
+</view>
+<!-- 4.列表展示 -->
+<!-- 4.1 wx:for 基本使用  -->
+<!-- 遍历数组 -->
+<view class="books">
+  <!--当item是对象时 不能使用 wx:key="*this" -->
+  <view wx:for="{{books}}" wx:key="id">
+    {{item.id}}-- {{item.name}}--{{item.price}}
+  </view>
+</view>
+<!-- 遍历数字 -->
+<view class="number">
+  <view wx:for="{{10}}" wx:key="" style="color: azure; background-color:#{{item}}90">
+    {{item}}
+  </view>
+</view>
+
+<!-- 遍历字符串 没有{{}},通常不会遍历字符串 -->
+<view class="string">
+  <view wx:for="string" style="color: azure;background-color:#{{index}}08">
+    {{item}}
+  </view>
+</view>
+<!-- 4.2 block组件使用 只接受控制属性。   item/index名称  -->
+<view class="books">
+  <block wx:for="{{books}}" wx:key="id" wx:for-item="book" wx:for-index="i">
+    <view>
+      {{book.name}}--{{i}}
+    </view>
+  </block>
+</view>
+<!-- 4.3 key作用 :提高性能-->
+
+
+
+
+
+
+
+<view>
+  -----------------------hidden属性，类似Vue:v-show
+</view>
+<!-- 3.hidden属性  -->
+<view hidden="true">
+  此时hidden属性值为true
+</view>
+
+<!-- 点击切换显示与隐藏 -->
+<button type="primary" bindtap="onChange">显示隐藏切换</button>
+<view style="text-align: center;background-color: aqua;" hidden="{{isHidden}}">
+  {{message}}
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<view>
+  -----------------------逻辑判断 wx:if – wx:elif – wx:else
+</view>
+<!--2. wx:if – wx:elif – wx:else ,只渲染符合条件的组件-->
+<view wx:if="{{score>90}}">
+  优秀
+</view>
+<view wx:elif="{{score>80}}">
+  良好
+</view>
+<view wx:elif="{{score>=60}}">
+  及格
+</view>
+<view wx:else="{{score<60}}">
+  不及格
+</view>
+
+
+
+<view>
+  ---------------------------------Mustache语法
+</view>
+<!--1. Mustache语法 -->
+<view>
+  {{message}}
+</view>
+
+<view>
+  {{firstname + "" + lastname}}
+</view>
+
+<view>
+  {{date}}
+</view>

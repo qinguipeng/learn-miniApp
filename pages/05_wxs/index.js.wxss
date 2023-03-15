@@ -1,0 +1,14 @@
+/* pages/05_wxs/index.js.wxss */
+
+/* 练习 */
+.count {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: red;
+}
+
+.time {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: blue;
+}

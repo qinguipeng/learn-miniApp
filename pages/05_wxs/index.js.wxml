@@ -1,0 +1,48 @@
+<!--pages/05_wxs/index.js.wxml-->
+<text style="background-color: chartreuse;">pages/05_wxs/index.js.wxml</text>
+
+<view>
+  ------------------------------wxs基本使用，不支持ES6+
+</view>
+
+<!--1. 写在<wxs>标签中  -->
+<!-- 必须添加module名称，使用时从模块调用 -->
+<wxs module="fomat">
+  function formatPrice(price) {
+    return "$" + price
+  }
+  // 必须使用commonJS导出
+  module.exports = { formatPrice: formatPrice }
+</wxs>
+
+<!-- 2. 写在.wxs文件中，具有层叠性 -->
+<wxs src="/utils/format.wxs" module="format" />
+
+<view class="books">
+  <block wx:for="{{books}}" wx:key="id">
+    <view>
+      name: {{item.name}}——price:{{format.formatPrice(item.price)}}
+    </view>
+  </block>
+</view>
+
+
+<!-- 展示总价格 -->
+<view class="totalPrice">
+  总价格：{{format.calcPrice(books)}}
+</view>
+
+
+
+<view>
+  ------------------------------wxs练习
+</view>
+<!-- 格式化数据 ，数字-->
+<view class="count">
+  1.格式化数据，数字==》播放量：{{format.formatCount(playCount)}}
+</view>
+
+<!-- 格式化数据，时间 -->
+<view class="time">
+  2.格式化数据，时间==》 {{format.formatTime(currentTime)}}/{{format.formatTime(duration)}}
+</view>
