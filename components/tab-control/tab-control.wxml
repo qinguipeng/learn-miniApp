@@ -1,0 +1,16 @@
+<!--components/tab-control/tab-control.wxml-->
+<!-- 
+1. data中存储获取数据
+2. 遍历显示到页面中
+3.调整样式，flex
+4.添加事件，传参数index
+5.通过判断currentIndex==index 动态增加样式 {{currentIndex==index?active:''}} 
+-->
+
+<view class="tab-control">
+  <block wx:for="{{titles}}" wx:key="*this">
+    <view class="item" bindtap="itemTap" data-index="{{index}}">
+      <text class="text {{currentIndex==index?'active':''}} ">{{item}}</text>
+    </view>
+  </block>
+</view>

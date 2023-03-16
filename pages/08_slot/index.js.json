@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-slot": "/components/my-slot/my-slot",
+    "multi-slot": "/components/multi-slot/multi-slot",
+    "cpn-behaviors": "/components/cpn-behaviors/cpn-behaviors",
+    "cpn-lifetime": "/components/cpn-lifetime/cpn-lifetime"
+  }
+}

@@ -1,1 +1,21 @@
 /* pages/07_component/index.js.wxss */
+
+
+.title {
+  background-color: paleturquoise;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* 页面使用标签选择器会对组件内部造成影响 */
+/* view {
+  color: slateblue;
+} */
+
+
+/* 4.组件的通信 */
+
+/* 4.2 向组件内部传递样式  */
+.abc {
+  background-color: greenyellow;
+}

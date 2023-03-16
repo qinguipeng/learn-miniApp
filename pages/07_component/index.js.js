@@ -1,66 +1,25 @@
 // pages/07_component/index.js.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    digitalTitle: ['phone', 'PC', 'ipad', 'camera']
   },
+  onSectionTitleClick(e) {
+    console.log("区域title发生了点击", e, e.detail);
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
+  }
 
-  },
+  , onTapIndexChange(e) {
+    console.log('tab-control索引改变', e.detail);
+    const index = e.detail
+    console.log('点击了：', this.data.digitalTitle[index]);
+  }
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 页面使用组件内的方法，类似于Vue中的ref
+  , onTC() {
+    // console.log(111);
+    //1. 获取组件实例对象
+    const tabControl = this.selectComponent('.tab-control')
+    // 2.调用组件实例里面的方法
+    tabControl.test()
   }
 })

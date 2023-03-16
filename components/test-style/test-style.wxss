@@ -1,0 +1,13 @@
+/* components/test-style/test-style.wxss */
+
+
+.title {
+  font-weight: 36rpx;
+  color: rgb(255, 0, 128);
+  background-color: rgb(251, 255, 2);
+}
+
+/* 组件内不能使用id选择器、属性选择器、标签选择器 ，会对外部造成影响 */
+/* view {
+  background-color: orange;
+} */

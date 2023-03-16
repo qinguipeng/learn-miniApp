@@ -10,8 +10,8 @@
 }
 
 /* 03_wxss */
-.title {
+/* .title {
   font-size: 30px;
   color: red;
   font-weight: 700;
-}
+} */

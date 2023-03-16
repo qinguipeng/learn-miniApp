@@ -10,8 +10,10 @@
     "pages/04_wxml/index.js",
     "pages/05_wxs/index.js",
     "pages/06_event/index.js",
-    "pages/07_component/index.js"
+    "pages/07_component/index.js",
+    "pages/08_slot/index.js"
   ],
+  "usingComponents": {},
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF3F3F",

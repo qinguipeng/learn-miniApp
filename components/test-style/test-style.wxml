@@ -1,0 +1,6 @@
+<!--components/test-style/test-style.wxml-->
+
+<view style="border:5px solid rgb(7,193,96);">
+  <view>我是组件test-style</view>
+  <view class="title">我是组件标题</view>
+</view>

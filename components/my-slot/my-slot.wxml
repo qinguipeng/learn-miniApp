@@ -1,0 +1,11 @@
+<!--components/my-slot/my-slot.wxml-->
+<view class="my-slot">
+  <view class="header">Header</view>
+  <view class="content">
+    <!-- 小程序中插槽不支持默认值 -->
+    <slot></slot>
+  </view>
+  <!--实现原理： 默认display:none,当插槽没有插任何东西,显示出来 ，实现方法，使用伪类选择器:empty + .default{display:block} -->
+  <view class="default">实现slot默认值</view>
+  <view class="footer">Footer</view>
+</view>

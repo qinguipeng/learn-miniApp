@@ -12,6 +12,7 @@ Page({
       { name: '05_wxs', path: "/pages/05_wxs/index.js" },
       { name: '06_event', path: "/pages/06_event/index.js" },
       { name: '07_component', path: "/pages/07_component/index.js" },
+      { name: '08_component_2', path: "/pages/08_slot/index.js" },
     ]
   }
   // 监听 onBtnClick

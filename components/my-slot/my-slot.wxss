@@ -1,0 +1,15 @@
+/* components/my-slot/my-slot.wxss */
+
+.my-slot {
+  border: 8rpx dotted brown;
+  margin: 20px;
+}
+
+/* 实现组件中插槽显示 默认数据 */
+.default {
+  display: none;
+}
+
+.content:empty+.default {
+  display: block;
+}

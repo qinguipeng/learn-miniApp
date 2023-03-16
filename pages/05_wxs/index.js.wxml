@@ -26,7 +26,6 @@
   </block>
 </view>
 
-
 <!-- 展示总价格 -->
 <view class="totalPrice">
   总价格：{{format.calcPrice(books)}}

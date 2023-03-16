@@ -1,0 +1,15 @@
+/* components/multi-slot/multi-slot.wxss */
+.multi-slot {
+  display: flex;
+  text-align: center;
+  border: 8rpx dotted rgb(0, 50, 189);
+}
+
+.left,
+.right {
+  width: 160rpx;
+}
+
+.center {
+  flex: 1;
+}

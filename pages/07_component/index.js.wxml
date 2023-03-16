@@ -1,2 +1,82 @@
 <!--pages/07_component/index.js.wxml-->
 <text>pages/07_component/index.js.wxml</text>
+<view>
+  ----------------------------------------1.使用内置组件
+</view>
+<!-- 1. 内置组件 -->
+<button type="primary">我是小程序内置组件之一button</button>
+
+
+<view>
+  ----------------------------------------2.使用自定义组件
+</view>
+<!-- 2. 自定义组件 -->
+<!--页面注册 使用自定义组件 section-info  -->
+<section-info />
+<tab-control titles="{{['手机','电脑','平板', '相机']}}" />
+<section-info />
+
+
+
+<view>
+  ----------------------------------------3.组件的样式细节
+</view>
+<!-- 3.组件的样式细节 -->
+<!-- 课题一：组件内的样式 对 外部样式 的影响 -->
+<!-- 使用自定义组件 <test-style> -->
+<test-style></test-style>
+
+<!-- 使用内置组件 view -->
+<view class=" title">
+  使用内置组件view 的title
+</view>
+<!-- 1.1 结论一：组件内的class样式，只对组件wxml内的节点生效, 对于引用组件的Page页面不生效 -->
+<!-- 1.2 结论二：组件内不能使用id选择器、属性选择器、标签选择器 ，《会》对外部造成影响-->
+
+
+<!-- 课题二：外部样式 对 自定义组件内样式 的影响 -->
+<!-- 2.1 结论一：外部使用class的样式，只对外部wxml的class生效，对组件内是不生效的 -->
+<!-- 2.2 结论二：外部使用了id选择器、属性选择器不会对组件内产生影响 -->
+<!-- 2.3 结论三：外部使用了 《标签选择器 》，《会》对组件内产生影响 -->
+
+<!-- 课题三：如何让class可以相互影响 -->
+<!-- 3.1 在 组件js文件Component对象中，可以传入一个options属性，其中options属性中有一个styleIsolation（隔离）属性。 -->
+<!-- 3.2  styleIsolation有三个取值：-->
+<!-- 3.2.1  isolated 表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响（默认取值）； -->
+<!-- 3.2.2  apply-shared 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面 -->
+<!-- 3.2.3  shared 表示页面 wxss 样式将影响到自定义组件，自定义组件 wxss 中指定的样式也会影响页面和其他设置 了-->
+
+
+<view>
+  ----------------------------------------4.组件的通信
+</view>
+<!-- 4.组件的通信 -->
+<view>
+  -----------------4.1 向组件传递 数据 - properties
+</view>
+<!-- 4.1 向组件传递 数据 - properties -->
+<section-info title="我与地坛" content="我是有些事情我没说,别以为是我忘记了..." />
+<section-info title="黄金时代" content="在我一生中最好的黄金时代,我想好吃,我想爱,我想..." />
+<view>
+  -----------------4.2 向组件传递样式 - externalClasses
+</view>
+<!-- 4.2  向组件传递样式 - externalClasses-->
+<section-info info="abc" title="向组件传递样式 - externalClasses" />
+
+
+<view>
+  -----------------4.3 组件向外传递事件 – 自定义事件
+</view>
+<!-- 4.3 组件向外传递事件 – 自定义事件-->
+
+<section-info bind:titleclick="onSectionTitleClick" title="组件向外传递事件 – 自定义事件" />
+
+
+<view>
+  ----------------------------------------5.自定义组件练习
+</view>
+<!-- 5.自定义组件练习 -->
+<tab-control titles="{{['流行','新款','热门']}}" />
+
+<tab-control class="tab-control" titles="{{['phone','PC','ipad', 'camera']}}" bind:indexchange="onTapIndexChange" />
+<button bindtap="onTC">调用tab-control的test()方法</button>
