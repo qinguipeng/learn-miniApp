@@ -9,7 +9,8 @@
     "pages/03_wxss/index.js",
     "pages/04_wxml/index.js",
     "pages/05_wxs/index.js",
-    "pages/06_event/index.js"
+    "pages/06_event/index.js",
+    "pages/07_component/index.js"
   ],
   "window": {
     "backgroundTextStyle": "light",

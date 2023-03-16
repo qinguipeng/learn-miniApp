@@ -1,3 +1,6 @@
+
+// WXS主要执行复杂的数据操作
+
 // 拼接字符
 function formatPrice(price) {
   return "￥" + price
@@ -11,16 +14,14 @@ function calcPrice(books) {
 // 格式化数字
 function formatCount(count) {
   var numCount = parseInt(count)
-  if (count >= 100000000) {
-    return (count / 100000000).toFixed(1) + "亿"
-  } else if (count >= 10000) {
-    return (count / 10000).toFixed(1) + "万"
+  if (numCount >= 100000000) {
+    return (numCount / 100000000).toFixed(1) + "亿"
+  } else if (numCount >= 10000) {
+    return (numCount / 10000).toFixed(1) + "万"
   } else {
-    return count
+    return numCount
   }
 }
-
-
 
 // 各式化时间
 // padLeft()判断是否需要加0

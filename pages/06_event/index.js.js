@@ -4,7 +4,7 @@ Page({
 
 
     // --------------------------------tab-control 相关
-    title: ["手机", "电脑", "平板", "mac"],
+    title: ["手机", "电脑", "平板", "相机"],
     currentIndex: 0
   }
   // tab-control
@@ -64,4 +64,38 @@ Page({
   }
 
 
+  // 6.事件捕获与冒泡
+  // 捕获
+  , v1CaptureTap() {
+    console.log("v1CaptureTap");
+  }
+  , v2CaptureTap() {
+    console.log("v2CaptureTap");
+  }
+  , v3CaptureTap() {
+    console.log("v3CaptureTap");
+  }
+  // 冒泡
+  , v1Tap() {
+    console.log("冒泡至v1Tap");
+  }
+  , v2Tap() {
+    console.log("冒泡至v2Tap");
+  }
+  , v3Tap() {
+    console.log("冒泡至v3Tap");
+  }
+
+
+  // 7.mark数据传递
+  , onMarkTap(e) {
+    console.log("onMarkTap", e);
+    // console.log(e.mark);
+    // 通过data-*
+    const data1 = e.currentTarget.dataset
+    console.log(data1);
+    // 通过mark
+    const data2 = e.mark
+    console.log(data2);
+  }
 })

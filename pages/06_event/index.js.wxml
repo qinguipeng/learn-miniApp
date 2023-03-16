@@ -47,3 +47,26 @@
     </view>
   </block>
 </view>
+
+<view>
+  ------------6.事件的 捕获（capture-bind:tap=） 与 冒泡（bindtap） + 补充：阻止捕获（capture-catch:tap）进而阻止冒泡
+</view>
+<!-- 6.事件的 捕获 与 冒泡 -->
+<view class="v1" capture-bind:tap="v1CaptureTap" bindtap="v1Tap">
+  <view class="v2" capture-catch:tap="v2CaptureTap" bindtap="v2Tap">
+    <view class="v3" capture-bind:tap="v3CaptureTap" bindtap="v3Tap">
+
+    </view>
+  </view>
+</view>
+
+
+<view>
+  ------------------7. 给逻辑层传递数据，除data-*以外，还可以用event.mark
+</view>
+<!-- 6.7. 给逻辑层传递数据，mark -->
+
+<view class="mark" bindtap="onMarkTap" data-age="18" mark:name="GP" mark:age="25">
+  mark传递数据
+  <button class="innerBtn" size="mini">inner</button>
+</view>
