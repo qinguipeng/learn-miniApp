@@ -11,7 +11,8 @@
     "pages/05_wxs/index.js",
     "pages/06_event/index.js",
     "pages/07_component/index.js",
-    "pages/08_slot/index.js"
+    "pages/08_slot/index.js",
+    "pages/09_api_network/index.js"
   ],
   "usingComponents": {},
   "window": {

@@ -10,6 +10,7 @@
   display: none;
 }
 
+/* 使用伪类:empty， */
 .content:empty+.default {
   display: block;
 }

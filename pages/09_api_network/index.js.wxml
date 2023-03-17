@@ -1,0 +1,9 @@
+<!--pages/09_api/index.js.wxml-->
+<view class="house-list">
+  <block wx:for="{{houseList}}" wx:key="houseId">
+    <view class="item">
+      <image src="{{item.data.image.url}}" mode="widthFix" />
+      <view class="title">{{item.data.houseName}}</view>
+    </view>
+  </block>
+</view>

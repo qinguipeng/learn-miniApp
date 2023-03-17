@@ -13,6 +13,7 @@ Page({
       { name: '06_event', path: "/pages/06_event/index.js" },
       { name: '07_component', path: "/pages/07_component/index.js" },
       { name: '08_component_2', path: "/pages/08_slot/index.js" },
+      { name: '09_api_network', path: "/pages/09_api_network/index.js" },
     ]
   }
   // 监听 onBtnClick
