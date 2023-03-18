@@ -11,6 +11,7 @@ function calcPrice(books) {
     return preValue + item.price
   }, 0)
 }
+
 // 格式化数字
 function formatCount(count) {
   var numCount = parseInt(count)
@@ -40,7 +41,7 @@ function padLeft(time) {
 function formatTime(time) {
   // 1.获取时间
   var minutes = Math.floor(time / 60)
-  var seconds = Math.floor(time) % 60
+  var seconds = Math.floor(time % 60)
   // padLeft()方法实现需要提添加0
   // 2.拼接字符串
   return padLeft(minutes) + ":" + padLeft(seconds)

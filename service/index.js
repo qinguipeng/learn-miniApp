@@ -16,7 +16,7 @@ export function gpRequest(options) {
 
 
 
-// 封装成一个类 ==>实例
+// 2. 封装成一个类 ==>实例
 // 有点难
 class GPRequest {
   constructor(baseURL) {
