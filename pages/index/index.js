@@ -14,6 +14,9 @@ Page({
       { name: '07_component', path: "/pages/07_component/index.js" },
       { name: '08_component_2', path: "/pages/08_slot/index.js" },
       { name: '09_api_network', path: "/pages/09_api_network/index.js" },
+      { name: '10_API_（弹窗交互|转发|获取设备信息|获取位置信息|本地存储）', path: "/pages/10_API/index.js" },
+      { name: '11_API_navigate(路由|跳转)', path: "/pages/11_API_navigate/index.js" },
+      { name: '12_login(登录流程)', path: "/pages/12_login/index.js" },
     ]
   }
   // 监听 onBtnClick

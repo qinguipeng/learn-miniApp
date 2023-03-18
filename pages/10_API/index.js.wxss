@@ -1,0 +1,4 @@
+/* pages/10_API/index.js.wxss */
+button {
+  margin: 5px;
+}

@@ -1,0 +1,17 @@
+<!--pages/11_API_navigate/index.js.wxml-->
+
+
+<view>--- 1. API/路由/wx.navigateTo(Object object) 传参</view>
+<!-- 1. wx.navigateTo(Object object) query传参 -->
+<button type="default" bindtap="onNavTap">跳到detail</button>
+
+
+<view>-----------2. wx.navigateBack(Object object) 传参</view>
+<!--2. wx.navigateBack(Object object) 传参 -->
+<text>{{message}}</text>
+
+
+
+<view> -------------------- 3. 组件/导航/navigator</view>
+<!-- 组件/导航/navigator -->
+<navigator url="/pages2/detail/detail" style="background-color: chartreuse;">跳转到detail</navigator>

@@ -42,5 +42,6 @@ class GPRequest {
 }
 export const GPrequestCity = new GPRequest("http://codercba.com:1888/api")
 export const GPrequestHouse = new GPRequest("http://codercba.com:1888/api")
+export const gpLoginRequset = new GPRequest("http://123.207.32.32:3000")
 
 

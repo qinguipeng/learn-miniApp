@@ -15,7 +15,7 @@ Page({
     // 2. 从 app 实例对象获取实例
     const token = app.globalData.token;
     const userInfo = app.globalData.userInfo;
-    console.log(token, userInfo);
+    // console.log(token, userInfo);
     // 3.带token 发网络请求
     wx.request({
       url: 'url',

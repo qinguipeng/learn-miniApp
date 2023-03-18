@@ -1,0 +1,38 @@
+<!--pages/10_API/index.js.wxml-->
+<text>pages/10_API/index.js.wxml</text>
+<view>
+  -----------API/界面/互交【1.展示弹窗showToast、showModal、showLoading、showActionSheet】
+</view>
+<!-- 1. 展示弹窗 -->
+<button bindtap="onShowToast">showToast</button>
+<button bindtap="onShowLoading">showLoading</button>
+<button bindtap="onShowModal">showModal</button>
+<button bindtap="onShowActionSheet">showActionSheet</button>
+
+<view>
+  -----------API onShareAppMessage【2.分享小程序信息】
+</view>
+<!-- 2. 分享小程序信息 -->
+
+
+
+<view>
+  -----------API/基础/系统/wx.getSystemInfo(Object object)【3.获取设备相关信息】
+</view>
+<!-- 3.获取设备相关信息 -->
+<button bindtap="getSystemInfo">获取设备信息</button>
+
+<view>
+  -----------API/位置/wx.getLocation(Object object)【4.获取位置】
+</view>
+<!-- 4.获取位置  -->
+<button bindtap="getLocation">获取位置信息</button>
+
+
+
+<view>
+  -----------API/数据缓存/wx.getLocation(Object object)【5.storage】
+</view>
+<!-- 5.storage -->
+<button bindtap="onLocalStorageSync">storageSync</button>
+<button bindtap="onLocalStorageAsync">storageAsync</button>

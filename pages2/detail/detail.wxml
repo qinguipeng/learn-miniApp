@@ -1,0 +1,16 @@
+<!--pages2/detail/detail.wxml-->
+<text>pages2/detail/detail.wxml</text>
+
+
+<view>--- 1. API/路由/wx.navigateTo(Object object) 传参</view>
+<view>name:{{name}},age:{{age}}</view>
+
+
+<view>-----------2. wx.navigateBack(Object object) 传参</view>
+<!-- 2. wx.navigateBack(Object object) -->
+<button type="warn" bindtap="onNavBack">返回上个页面</button>
+
+
+<view> -------------------- 3. 组件/导航/navigator</view>
+<!-- 组件/导航/navigator -->
+<navigator url="" open-type="navigateBack" style="background-color: chartreuse;">返回上个页面</navigator>
